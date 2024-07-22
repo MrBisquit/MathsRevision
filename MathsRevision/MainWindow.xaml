@@ -1,0 +1,28 @@
+﻿<Window x:Class="MathsRevision.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MathsRevision"
+        mc:Ignorable="d"
+        Title="Maths revision" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Trigonometry">
+                <Frame Source="Trig.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Pythagoras">
+                <Frame Source="Pythagoras.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Triangles">
+                <Frame Source="Triangles.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Rectangles">
+                <Frame Source="Rectangles.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Circles">
+                <Frame Source="Circles.xaml"></Frame>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

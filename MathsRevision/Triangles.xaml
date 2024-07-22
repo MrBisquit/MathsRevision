@@ -1,0 +1,122 @@
+﻿<Page x:Class="MathsRevision.Triangles"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MathsRevision"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Triangles">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Canvas Name="Draw" HorizontalAlignment="Center" VerticalAlignment="Center"></Canvas>
+
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <DockPanel>
+                    <TextBlock FontSize="20">Triangles</TextBlock>
+                    <Button Width="100" HorizontalAlignment="Right" Name="Randomise" Click="Randomise_Click">Randomise</Button>
+                </DockPanel>
+                <Separator></Separator>
+                <TextBlock FontWeight="Bold">Inputs</TextBlock>
+                <TextBlock FontWeight="SemiBold">Leave only one section empty (Put 0 in the boxes)</TextBlock>
+                <Button Name="FFO" Click="FFO_Click">Fill from outputs</Button>
+
+                <StackPanel Background="#F1F1F1" Margin="2">
+                    <DockPanel>
+                        <Label>A</Label>
+                        <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="A" TextChanged="Nums_TextChanged">0</TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label>B</Label>
+                        <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="B" TextChanged="Nums_TextChanged">0</TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label>C</Label>
+                        <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="C" TextChanged="Nums_TextChanged">0</TextBox>
+                    </DockPanel>
+                </StackPanel>
+
+                <StackPanel Background="#F1F1F1" Margin="2">
+                    <DockPanel>
+                        <Label>Width</Label>
+                        <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="W" TextChanged="Nums_TextChanged">0</TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label>Height</Label>
+                        <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="H" TextChanged="Nums_TextChanged">0</TextBox>
+                    </DockPanel>
+                </StackPanel>
+
+                <StackPanel Background="#F1F1F1" Margin="2">
+                    <DockPanel>
+                        <Label>Perimeter</Label>
+                        <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="P" TextChanged="Nums_TextChanged">0</TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label>Area</Label>
+                        <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="Ar" TextChanged="Nums_TextChanged">0</TextBox>
+                    </DockPanel>
+                </StackPanel>
+                <Separator></Separator>
+
+                <TextBlock FontWeight="Bold">Outputs</TextBlock>
+                <DockPanel>
+                    <Label>A</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OA" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>B</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OB" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>C</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OC" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>Width</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OW" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>Height</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OH" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>Perimeter</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OP" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>Area</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OAr" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+                <Separator></Separator>
+                <DockPanel>
+                    <Image Source="/MathsRevision;component/Images/Triangles.png" Width="200"></Image>
+                    <TextBlock TextWrapping="Wrap">
+                    A triangle is half of a rectangle<LineBreak />
+                    So the area of a triangle is half of the rectangle.<LineBreak />
+                    Area of triangle = (w * h) / 2<LineBreak />
+                    The perimeter is just the outside, can also just be half of the rectangle.<LineBreak />
+                    Perimeter of triangle = (w² + b²) / 2<LineBreak />
+                    Or, it can be a + b + c:<LineBreak />
+                    Perimeter of triangle = a + b + c
+                    </TextBlock>
+                </DockPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

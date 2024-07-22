@@ -1,0 +1,75 @@
+﻿<Page x:Class="MathsRevision.Pythagoras"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MathsRevision"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Pythagoras">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Canvas Name="Draw" HorizontalAlignment="Center" VerticalAlignment="Center"></Canvas>
+
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <DockPanel>
+                    <TextBlock FontSize="20">Pythagoras theorem</TextBlock>
+                    <Button Width="100" HorizontalAlignment="Right" Name="Randomise" Click="Randomise_Click">Randomise</Button>
+                </DockPanel>
+                <Separator></Separator>
+                <TextBlock FontWeight="Bold">Maths used</TextBlock>
+                <TextBlock Name="Maths"></TextBlock>
+                <Separator></Separator>
+                <TextBlock FontWeight="Bold">Inputs</TextBlock>
+                <TextBlock FontWeight="SemiBold">Leave one empty (Or 0)</TextBlock>
+
+                <DockPanel>
+                    <Label>A</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="A" TextChanged="Nums_TextChanged">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>B</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="B" TextChanged="Nums_TextChanged">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>C</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="C" TextChanged="Nums_TextChanged">0</TextBox>
+                </DockPanel>
+                <Separator></Separator>
+                <TextBlock FontWeight="Bold">Outputs</TextBlock>
+
+                <DockPanel>
+                    <Label>A</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OA" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>B</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OB" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label>C</Label>
+                    <TextBox VerticalAlignment="Center" Width="300" HorizontalAlignment="Right" Name="OC" IsReadOnly="True">0</TextBox>
+                </DockPanel>
+                <Separator></Separator>
+                <DockPanel>
+                    <Image Source="/MathsRevision;component/Images/Pythagoras.png" Width="200"></Image>
+                    <TextBlock AllowDrop="True" TextWrapping="Wrap">
+                    <Run FontWeight="SemiBold">Pythagoras theorum</Run><LineBreak />
+                    <Run>a² + b² = c²</Run><LineBreak />
+                    <Run>a² + c² = b²</Run><LineBreak />
+                    <Run>b² + c² = a²</Run>
+                    </TextBlock>
+                </DockPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
